@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화곡 셔츠룸 블로그 | 마포 성우이벤트</title>
+    <meta name="description" content="마포 성우이벤트가 전하는 화곡 셔츠룸의 모든 것. 진짜 프리미엄의 기준은 무엇인가? 지금 010-6279-0862로 확인하세요.">
+    <meta name="keywords" content="화곡 셔츠룸, 마포 성우이벤트, 셔츠룸 추천, 화곡동 이벤트, 프리미엄 셔츠룸, 셔츠룸 후기">
+    <link rel="canonical" href="https://sf-t3-1779642675702-002.vercel.app/blog">
+    <meta property="og:title" content="화곡 셔츠룸 블로그 | 마포 성우이벤트">
+    <meta property="og:description" content="마포 성우이벤트가 전하는 화곡 셔츠룸의 모든 것. 진짜 프리미엄의 기준은 무엇인가?">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-002.vercel.app/blog">
+    <meta property="og:image" content="https://sf-t3-1779642675702-002.vercel.app/og-image.jpg">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: #0a0a0a; color: #f5f5f5; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #111; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; max-width: 1200px; margin: 0 auto; }
+        .logo { font-size: 1.6rem; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; color: #fff; text-decoration: none; }
+        .logo span { color: #d4af37; }
+        nav { display: flex; gap: 32px; }
+        nav a { color: #aaa; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s; letter-spacing: 0.5px; }
+        nav a:hover { color: #d4af37; }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; padding: 5px; }
+        .hamburger span { width: 28px; height: 2px; background: #fff; margin: 4px 0; transition: 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+        @media (max-width: 768px) {
+            nav { display: none; position: absolute; top: 70px; left: 0; width: 100%; background: #111; flex-direction: column; padding: 20px; gap: 16px; border-bottom: 1px solid #222; }
+            nav.active { display: flex; }
+            .hamburger { display: flex; }
+        }
+        .tel-link { color: #d4af37; font-weight: 700; font-size: 1.1rem; text-decoration: none; }
+        .tel-link:hover { text-decoration: underline; }
+
+        /* Blog Page Specific Styles */
+        .blog-hero { padding: 80px 0 40px; text-align: center; border-bottom: 1px solid #222; }
+        .blog-hero h1 { font-size: 2.8rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 16px; }
+        .blog-hero h1 span { color: #d4af37; }
+        .blog-hero p { color: #888; font-size: 1.15rem; max-width: 600px; margin: 0 auto; }
+        .blog-post { padding: 60px 0; }
+        .blog-post .post-meta { display: flex; gap: 20px; color: #666; font-size: 0.9rem; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 20px; }
+        .blog-post .post-meta span { color: #d4af37; }
+        .blog-post h2 { font-size: 2rem; font-weight: 800; margin-bottom: 24px; line-height: 1.3; }
+        .blog-post h3 { font-size: 1.4rem; font-weight: 700; margin: 40px 0 16px; color: #d4af37; }
+        .blog-post p { color: #ccc; font-size: 1.05rem; margin-bottom: 20px; }
+        .blog-post blockquote { border-left: 4px solid #d4af37; padding: 20px 30px; margin: 30px 0; background: #151515; font-style: italic; color: #aaa; font-size: 1.1rem; }
+        .blog-post .highlight-box { background: #111; border: 1px solid #333; padding: 30px; margin: 30px 0; border-radius: 4px; }
+        .blog-post .highlight-box p { margin-bottom: 0; }
+        .blog-post .cta-section { text-align: center; padding: 50px 0; border-top: 1px solid #222; border-bottom: 1px solid #222; margin: 50px 0; }
+        .blog-post .cta-section h3 { color: #fff; font-size: 1.8rem; margin-bottom: 16px; }
+        .blog-post .cta-section p { color: #888; margin-bottom: 20px; }
+        .blog-post .cta-btn { display: inline-block; background: #d4af37; color: #0a0a0a; padding: 16px 48px; font-size: 1.1rem; font-weight: 700; text-decoration: none; border-radius: 4px; transition: 0.3s; }
+        .blog-post .cta-btn:hover { background: #c49f2e; transform: translateY(-2px); }
+        .blog-post ul { list-style: none; margin: 20px 0; }
+        .blog-post ul li { padding: 12px 0; border-bottom: 1px solid #222; color: #ccc; font-size: 1.05rem; }
+        .blog-post ul li::before { content: "▸ "; color: #d4af37; font-weight: bold; }
+        footer { background: #111; padding: 40px 0; text-align: center; border-top: 1px solid #222; color: #666; font-size: 0.9rem; }
+        footer a { color: #d4af37; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">화곡<span>셔츠룸</span></a>
+            <nav>
+                <a href="/">홈</a>
+                <a href="/about">소개</a>
+                <a href="/blog">블로그</a>
+                <a href="/gallery">갤러리</a>
+                <a href="/contact">문의</a>
+                <a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="blog-hero">
+        <div class="container">
+            <h1>블로그: <span>진짜 프리미엄</span>의 기준</h1>
+            <p>화곡 셔츠룸, 마포 성우이벤트가 말하는 업계의 현실과 당신이 알아야 할 진실</p>
+        </div>
+    </section>
+
+    <section class="blog-post">
+        <div class="container">
+            <div class="post-meta">
+                <span>마포 성우이벤트</span> 
+                <span>|</span> 
+                2024.03.15 
+                <span>|</span> 
+                8분 읽기
+            </div>
+
+            <h2>화곡 셔츠룸, 니가 생각하는 그런 곳 아니다</h2>
+            <p>솔직히 말해서, 요즘 셔츠룸 골라보면 다 비슷비슷해. 가격만 비싸고 서비스는 형편없고. 근데 화곡 셔츠룸? 마포 성우이벤트가 운영하는 이곳은 완전히 다른 레벨이야. 내가 왜 이렇게 자신 있게 말하는지 알려줄게.</p>
+            <p>처음 문 열었을 때부터 우리는 '럭셔리'라는 단어의 의미를 다시 정의했어. 대리석 바닥, 크리스탈 샹들리에? 그런 건 기본이야. 진짜 프리미엄은 디테일에서 나오는 거라고. 마포 성우이벤트의 철학은 단순해: "기대를 넘어서는 경험" 그게 전부야.</p>
+
+            <blockquote>
+                "프리미엄은 가격표에 적힌 숫자가 아니라, 당신이 그 공간에 들어섰을 때 느끼는 감정이다."
+            </blockquote>
+
+            <h3>왜 화곡 셔츠룸인가?</h3>
+            <p>화곡동에서 셔츠룸 찾는 사람들, 대부분 실패하는 경우를 봤어. 이유가 뭘까? 간단해. 그들은 진짜를 경험해본 적이 없으니까. 마포 성우이벤트가 운영하는 이곳은 단순한 유흥 공간이 아니야. 그것은 완전한 프라이빗 라운지, 당신만을 위한 공간이지.</p>
+            <p>여기 오는 사람들은 이미 다 알거야. 가짜는 가짜라는 걸. 그래서 우리는 처음부터 끝까지 정직하게 간다. 인테리어부터 서비스, 매니저의 퀄리티까지 모든 것이 진짜야.</p>
+
+            <div class="highlight-box">
+                <p>⚡ 화곡 셔츠룸, 마포 성우이벤트만의 차별점: 100% 리얼 프리미엄 시스템. 가품 없음. 가짜 서비스 없음. 오직 진짜만.</p>
+            </div>
+
+            <h3>프리미엄의 기준을 다시 세우다</h3>
+            <p>내가 말하는 프리미엄은 이거야. 첫째, 공간. 우리의 라운지는 그 자체로 하나의 작품이야. 둘째, 서비스. 모든 게스트는 VIP 대우를 받아. 셋째, 프라이버시. 당신의 시간은 완벽하게 보호받아. 이게 바로 마포 성우이벤트가 만든 화곡 셔츠룸의 새로운 기준이야.</p>
+            <p>솔직히 말해서, 다른 곳 가본 사람들은 바로 차이를 느껴. "아, 이게 진짜구나" 하고. 그런 반응을 가장 많이 들어. 우리는 그게 자랑스러워.</p>
+
+            <ul>
+                <li>프라이빗 VIP 라운지 7개 운영</li>
+                <li>모든 매니저 2주 교육 이수</li>
+                <li>100% 사전 예약제로 운영</li>
+                <li>24시간 고객 케어 시스템</li>
+                <li>최상급 오디오 & 비주얼 시스템</li>
+            </ul>
+
+            <h3>마포 성우이벤트의 철학</h3>
+            <p>우리는 '그냥 하는 곳'이 아니야. 마포 성우이벤트는 10년 이상의 노하우로 이 업계를 리드해왔어. 화곡 셔츠룸은 그 정점에 있는 거지. 모든 디테일이 완벽해야 한다는 집착, 그것이 우리를 다른 곳과 다르게 만든다.</p>
+            <p>진짜를 원한다면, 가짜에 속지 마. 화곡 셔츠룸, 마포 성우이벤트가 당신을 기다리고 있어. 지금 바로 예약해. 후회하지 않을 거야.</p>
+
+            <div class="cta-section">
+                <h3>지금 당장 예약하라</h3>
+                <p>진짜 프리미엄을 경험할 기회는 오늘뿐. 마포 성우이벤트의 화곡 셔츠룸</p>
+                <a href="tel:010-6279-0862" class="cta-btn">010-6279-0862</a>
+                <p style="margin-top: 16px; font-size: 0.9rem; color: #666;">24시간 예약 가능</p>
+            </div>
+
+            <p style="color: #666; font-size: 0.95rem; text-align: center; margin-top: 30px;">
+                화곡 셔츠룸 | 마포 성우이벤트 | 프리미엄 셔츠룸의 새로운 기준
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>화곡 셔츠룸 | 마포 성우이벤트 | 대표: 성우 | 사업자등록번호: 123-45-67890</p>
+            <p>주소: 서울특별시 마포구 화곡로 123 | <a href="tel:010-6279-0862">010-6279-0862</a></p>
+            <p style="margin-top: 10px;">&copy; 2024 화곡 셔츠룸. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
